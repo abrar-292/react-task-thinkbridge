@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import localStorage from '../services/local-storage';
@@ -12,16 +12,13 @@ export function Home() {
   const [id, setId] = useState<number>(0);
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
 
-  const readInventoryData = useCallback(() => {
-    return localStorage.getItem('inventoryData') as Inventory[];
-  }, []);
-
   useEffect(() => {
-    if (!localStorage.getItem('inventoryData')) {
+    const localData = localStorage.getItem('inventoryData') as Inventory[];
+    if (!localData.length) {
       localStorage.setItem('inventoryData', staticData);
     }
-    setInventoryData(readInventoryData);
-  }, [readInventoryData]);
+    setInventoryData(localData);
+  }, []);
 
   const handleDeleteAction = (invId: number) => {
     localStorage.removeItem('inventoryData');
