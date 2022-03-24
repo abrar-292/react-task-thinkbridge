@@ -1,0 +1,83 @@
+{
+  "name": "think-bridge-react-task",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "1.0.6",
+    "@tailwindcss/forms": "0.5.0",
+    "@tailwindcss/line-clamp": "0.3.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "6.1.5",
+    "@types/tailwindcss": "3.0.9",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "autoprefixer": "10.4.4",
+    "babel-plugin-inline-react-svg": "2.0.1",
+    "babel-plugin-module-resolver": "4.1.0",
+    "clsx": "1.1.1",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "16.1.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.1.2",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "0.5.7",
+    "formik": "2.2.9",
+    "husky": "7.0.4",
+    "postcss": "8.4.12",
+    "prettier": "2.6.0",
+    "prettier-plugin-package": "1.3.0",
+    "prettier-plugin-tailwindcss": "0.1.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "6.1.0",
+    "react-router-dom": "6.2.2",
+    "react-scripts": "5.0.0",
+    "tailwindcss": "^3.0.23",
+    "tsconfig-paths-webpack-plugin": "3.5.2",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0",
+    "yup": "0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint:all": "yarn lint:code --max-warnings 0 && yarn lint:prettier -c",
+    "lint:code": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:prettier": "yarn prettier 'src/**/*.{js,jsx,ts,tsx,less,json,md,yml}'",
+    "build:styles": "npx tailwindcss -i ./src/assets/css/index.css -o ./public/css/styles.min.css",
+    "compile": "tsc --noEmit",
+    "compile:all": "yarn compile --project tsconfig.json",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
