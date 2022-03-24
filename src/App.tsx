@@ -9,12 +9,12 @@ import AddEditInventory from './Home/AddEditInventory/AddEditInventory';
 function App() {
   return (
     <div className="App">
-      <Helmet defaultTitle="Vityl" title="Vityl">
+      <Helmet defaultTitle="ThinkBridge" title="ThinkBridge">
         <link rel="preconnect" href={process.env.REACT_APP_API_URL} />
         {/* TODO: */}
         {/* <link rel="shortcut icon" href="/favicon.png" type="image/png" /> */}
-        <meta name="description" content="Vityl" />
-        <meta name="application-name" content="Vityl" />
+        <meta name="description" content="ThinkBridge" />
+        <meta name="application-name" content="ThinkBridge" />
       </Helmet>
       <BrowserRouter>
         <Routes>
